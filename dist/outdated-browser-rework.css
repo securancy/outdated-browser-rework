@@ -8,7 +8,6 @@
   left: 0;
   position: fixed;
   text-align: center;
-  text-transform: uppercase;
   top: 0;
   width: 100%;
   z-index: 1500;
@@ -33,8 +32,9 @@
   margin: 0;
 }
 #outdated #buttonUpdateBrowser {
-  border: 2px solid #342525;
-  color: #342525;
+  border: none;
+  background: #342525;
+  color: #f6cbcb;
   cursor: pointer;
   display: block;
   margin: 30px auto 0;
@@ -44,13 +44,13 @@
   width: 230px;
 }
 #outdated #buttonUpdateBrowser:hover {
-  background-color: #342525;
+  background-color: #523a3a;
   color: #f6cbcb;
 }
 #outdated .last {
   height: 20px;
   position: absolute;
-  right: 70px;
+  right: 25px;
   top: 10px;
   width: auto;
   display: inline-table;
@@ -68,6 +68,12 @@
   position: relative;
   text-decoration: none;
   width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  #outdated {
+    padding: 50px 10px 20px;
+  }
 }
 
 /*# sourceMappingURL=outdated-browser-rework.css.map */

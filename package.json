@@ -28,7 +28,7 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"build": "jest && sass style.scss dist/outdated-browser-rework.css && browserify index.js -d -s outdatedBrowserRework -o dist/outdated-browser-rework.js && uglifyjs dist/outdated-browser-rework.js --ie8 -c -m > ../letselmakelaar/app/assets/outdated-browser-rework.min.js",
+		"build": "jest && sass style.scss dist/outdated-browser-rework.css && browserify index.js -d -s outdatedBrowserRework -o dist/outdated-browser-rework.js && uglifyjs dist/outdated-browser-rework.js --ie8 -c -m > dist/outdated-browser-rework.min.js",
 		"watch": "nodemon --exec 'npm run build' --ignore dist",
 		"test": "jest"
 	}
