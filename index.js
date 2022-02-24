@@ -61,40 +61,42 @@ module.exports = function(options) {
 				fadeIn(opacityValue)
 			}
 		}
-	
+
 		// Style element explicitly - TODO: investigate and delete if not needed
 		var startStylesAndEvents = function () {
 			var buttonClose = document.getElementById("buttonCloseUpdateBrowser")
-			var buttonUpdate = document.getElementById("buttonUpdateBrowser")
-	
-			//check settings attributes
-			outdatedUI.style.backgroundColor = backgroundColor
-			//way too hard to put !important on IE6
-			outdatedUI.style.color = textColor
-			outdatedUI.children[0].children[0].style.color = textColor
-			outdatedUI.children[0].children[1].style.color = textColor
-	
-			// Update button is desktop only
-			if (buttonUpdate) {
-				buttonUpdate.style.color = textColor
-				if (buttonUpdate.style.borderColor) {
-					buttonUpdate.style.borderColor = textColor
-				}
-	
-				// Override the update button color to match the background color
-				buttonUpdate.onmouseover = function () {
-					this.style.color = backgroundColor
-					this.style.backgroundColor = textColor
-				}
-	
-				buttonUpdate.onmouseout = function () {
-					this.style.color = textColor
-					this.style.backgroundColor = backgroundColor
-				}
-			}
-	
-			buttonClose.style.color = textColor
-	
+
+			// Commented out code below because the browser is probably not so old it doesnt support loading a CSS file
+			// var buttonUpdate = document.getElementById("buttonUpdateBrowser")
+
+			// //check settings attributes
+			// outdatedUI.style.backgroundColor = backgroundColor
+			// //way too hard to put !important on IE6
+			// outdatedUI.style.color = textColor
+			// outdatedUI.children[0].children[0].style.color = textColor
+			// outdatedUI.children[0].children[1].style.color = textColor
+			//
+			// // Update button is desktop only
+			// if (buttonUpdate) {
+			// 	buttonUpdate.style.color = textColor
+			// 	if (buttonUpdate.style.borderColor) {
+			// 		buttonUpdate.style.borderColor = textColor
+			// 	}
+			//
+			// 	// Override the update button color to match the background color
+			// 	buttonUpdate.onmouseover = function () {
+			// 		this.style.color = backgroundColor
+			// 		this.style.backgroundColor = textColor
+			// 	}
+			//
+			// 	buttonUpdate.onmouseout = function () {
+			// 		this.style.color = textColor
+			// 		this.style.backgroundColor = backgroundColor
+			// 	}
+			// }
+			//
+			// buttonClose.style.color = textColor
+
 			buttonClose.onmousedown = function () {
 				outdatedUI.style.display = "none"
 				return false
