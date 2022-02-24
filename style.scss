@@ -2,11 +2,9 @@
 $primaryColor: #f6cbcb;
 // Will be the color of the text and background of the button
 $secondaryColor: #342525;
-// Add the font of the application/website you are creating this for
-$brandFont: IBM Plex sans;
 
 #outdated {
-	font-family: $brandFont, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	position:absolute;
 	background-color: $primaryColor;
 	color: $secondaryColor;
